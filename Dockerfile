@@ -14,6 +14,9 @@ RUN usermod -u 99 nobody && \
 
 RUN apt-get update -qq
 RUN apt-get install wget
+RUN cd /tmp
+RUN wget barracudadrive.com/install/BarracudaDrive.linux.install
+RUN chmod +x BarracudaDrive.linux.install
 
 # Volume mappings
 VOLUME /config
