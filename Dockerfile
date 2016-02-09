@@ -13,7 +13,7 @@ RUN usermod -u 99 nobody && \
     usermod -g 100 nobody
 
 RUN apt-get update -qq
-RUN apr-get install wget
+RUN apt-get install wget
 
 # Volume mappings
 VOLUME /config
