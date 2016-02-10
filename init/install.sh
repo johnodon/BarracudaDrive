@@ -4,6 +4,7 @@ cd /tmp
 # If BD is already installed the upgrade
 if [ -f "/home/bd/bdd" ]; then
 	sleep 1
+	chown -R bd:daemon /home/bd
 	rm -f bd&&mkdir bd&&cd bd
 	wget http://barracudadrive.com/BarracudaDrive.linux-x64.tar.gz || abort
 	tar xvzf BarracudaDrive.linux-x64.tar.gz
