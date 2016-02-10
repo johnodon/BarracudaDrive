@@ -38,8 +38,8 @@ rm -f *.txt
 cd InstallDaemon || abort
 sed -i 's/BDUSER=bd/BDUSER=nobody/g' /home/nobody/InstallDaemon/bdd.sh
 sed -i 's+BDHOME=/home/bd+BDHOME=/home/nobody+g' /home/nobody/InstallDaemon/bdd.sh
-#chmod +x *.sh
-#./install.sh
+chmod +x *.sh
+./install.sh
 #sleep 5
 #cd ..
 #rm -rf InstallDaemon || abort
