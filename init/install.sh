@@ -28,6 +28,7 @@ if [ -f "/home/bd/bdd" ]; then
 fi
 
 useradd -G daemon -m -s /bin/bash  bd || abort
+chown -R bd:daemon /home/bd
 cd /home/bd || abort
 wget http://barracudadrive.com/BarracudaDrive.linux-x64.tar.gz || abort
 tar xvzf BarracudaDrive.linux-x64.tar.gz || abort
