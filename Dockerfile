@@ -17,5 +17,6 @@ RUN apt-get install wget -qy
 ADD /init /etc/my_init.d/
 RUN chmod +x /etc/my_init.d/install.sh
 
-# Volume mappings
+# Port and Volume mappings
 VOLUME /home/nobody
+EXPOSE 80
