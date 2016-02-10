@@ -14,8 +14,8 @@ RUN usermod -u 99 nobody && \
 
 RUN apt-get update -qq
 RUN apt-get install wget -qy
-ADD /install /install/
-RUN chmod +x /install/install.sh
+ADD /init /etc/my_init.d/
+RUN chmod +x /etc/my_init.d/install.sh
 
 # Volume mappings
 VOLUME /config
