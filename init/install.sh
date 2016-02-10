@@ -47,6 +47,6 @@ chmod +x *.sh
 #ln -s /home/nobody/applications disk/applications
 #cd applications
 #wget http://barracudadrive.com/unix/sslcert.zip || abort
-#chown -R nobody:users /home/nobody
+chown -R nobody:users /home/nobody
 #/etc/init.d/bdd start
 exit 0
