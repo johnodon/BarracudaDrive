@@ -35,18 +35,18 @@ tar xvzf BarracudaDrive.linux-x64.tar.gz || abort
 chmod +x bdd
 rm -f BarracudaDrive.linux-x64.tar.gz
 rm -f *.txt
-cd InstallDaemon || abort
-sed -i 's/BDUSER=bd/BDUSER=nobody/g' /home/nobody/InstallDaemon/bdd.sh
-sed -i 's/BDHOME=#home#bd/BDUSER=#home#nobody/g' /home/nobody/InstallDaemon/bdd.sh
-chmod +x *.sh
-./install.sh
-sleep 5
-cd ..
-rm -rf InstallDaemon || abort
-ln -s /home/nobody/cmsdocs disk/cmsdocs
-ln -s /home/nobody/applications disk/applications
-cd applications
-wget http://barracudadrive.com/unix/sslcert.zip || abort
-chown -R nobody:users /home/nobody
-/etc/init.d/bdd start
+#cd InstallDaemon || abort
+#sed -i 's/BDUSER=bd/BDUSER=nobody/g' /home/nobody/InstallDaemon/bdd.sh
+#sed -i 's/BDHOME=#home#bd/BDUSER=#home#nobody/g' /home/nobody/InstallDaemon/bdd.sh
+#chmod +x *.sh
+#./install.sh
+#sleep 5
+#cd ..
+#rm -rf InstallDaemon || abort
+#ln -s /home/nobody/cmsdocs disk/cmsdocs
+#ln -s /home/nobody/applications disk/applications
+#cd applications
+#wget http://barracudadrive.com/unix/sslcert.zip || abort
+#chown -R nobody:users /home/nobody
+#/etc/init.d/bdd start
 exit 0
