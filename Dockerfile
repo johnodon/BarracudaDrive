@@ -18,4 +18,4 @@ ADD /init /etc/my_init.d/
 RUN chmod +x /etc/my_init.d/install.sh
 
 # Volume mappings
-VOLUME /home/bd
+VOLUME /config
