@@ -12,10 +12,8 @@ CMD ["/sbin/my_init"]
 RUN usermod -u 99 nobody && \
     usermod -g 100 nobody
 
-RUN apt-get update -qq
-RUN apt-get install wget
-RUN wget barracudadrive.com/install/BarracudaDrive.linux.install -P /tmp/
-RUN chmod +x /tmp/BarracudaDrive.linux.install
+ADD /install /install/
+RUN chmod +x /install/install.sh
 
 # Volume mappings
 VOLUME /config
