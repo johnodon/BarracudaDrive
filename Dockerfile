@@ -8,7 +8,7 @@ ENV HOME /root
 # Use baseimage-docker's init system
 CMD ["/sbin/my_init"]
 
-#Change uid & gid to match Unraid
+# Change uid & gid to match Unraid
 RUN usermod -u 99 nobody && \
     usermod -g 100 nobody
 
